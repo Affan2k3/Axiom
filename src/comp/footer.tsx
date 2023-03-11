@@ -1,101 +1,197 @@
-import React from 'react'
-import Dropup from './drop'
-import Dropdown from './drop'
-import { Footerdata } from './footerdata'
-import { FaEnvelope } from "react-icons/fa"
+import React from "react";
+// import Dropup from './drop'
+// import Dropdown from './drop'
+import { Footerdata, footsub, powername } from "./footerdata";
+// import { BsEnvelope } from "react-icons/bs";
+import { IoIosArrowDown } from "react-icons/io";
+// import Dropdown from "./drop";
+import { Dropup } from "./dropdown2";
 
 export const Footer = () => {
-    const dataHeaderZero = Footerdata[0].header
-    const dataListZero = Footerdata[0].list
-    const dataHeaderOne = Footerdata[1].header
-    const dataListOne = Footerdata[1].list
-    const dataHeaderTwo = Footerdata[2].header
-    const dataListTwo = Footerdata[2].list
- 
-    
+  const dataHeaderZero = Footerdata[0].header;
+  const dataListZero = Footerdata[0].list;
+  const dataHeaderOne = Footerdata[1].header;
+  const dataListOne = Footerdata[1].list;
+  const dataHeaderTwo = Footerdata[2].header;
+  const dataListTwo = Footerdata[2].list;
+
   return (
-    <div className=' bg-black text-white h-[33rem]'>
-
-    <div className='flex flex-wrap gap-7'>
-        <div className=' my-20 pl-[72px] '>
-
-            <div className=''><img src="https://cdn.shopify.com/s/files/1/2091/0251/files/logo-white-105_71e79249-fe62-4301-8a26-2342f207106a_x35@2x.png?v=1613161823" alt="motion" height={120} width={120}/></div>
-            <br />
-            <div className='py-2 flex gap-4'>
-
-            <svg  xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16"> <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" fill="white"></path> </svg>
-                <svg className="color: rgb(255, 255, 255);" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z" fill="#ffffff"></path></svg>
-                </div>
-        </div>
-        <div className='flex ml-36 gap-32'>
+    <div className="w-full bg-black pt-20 pb-14 text-[14.88px]  text-white">
+      <div className="flex flex-col px-[20px] min-[590px]:pl-[40px] md:flex-row md:justify-around md:pl-[0px]">
+        <div className="">
+          <div className="flex w-full flex-row justify-between min-[590px]:flex-col">
             <div>
-
-            <li className=' flex flex-col my-20'>
-                <>
-                <h2 className='font-bold '>{dataHeaderZero}</h2>
-                <ul className='py-5'>
-
+              <img
+                src="https://cdn.shopify.com/s/files/1/2091/0251/files/logo-white-105_71e79249-fe62-4301-8a26-2342f207106a_x35@2x.png?v=1613161823"
+                alt="motion"
+                height={110}
+                width={110}
+              />
+            </div>
+            <div className="flex flex-row gap-4 min-[590px]:py-6 ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="27px"
+                height="27px"
+                fill="currentColor"
+                className="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                {" "}
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  fill="white"
+                ></path>{" "}
+              </svg>
+              <svg
+                className="color: rgb(255, 255, 255);"
+                xmlns="http://www.w3.org/2000/svg"
+                width="28px"
+                height="28px"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"
+                  fill="#ffffff"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <br />
+        </div>
+        <div className="hidden min-[590px]:inline">
+          <li className=" flex flex-col">
+            <>
+              <h2 className="font-bold tracking-widest">{dataHeaderZero}</h2>
+              <ul className="py-5">
                 {dataListZero.map((item: any) => {
-                    console.log(item)
-                    return <li className=' flex flex-col py-[0.4rem] text-white'>{item}</li>
+                  return (
+                    <li className=" flex flex-col py-[0.4rem]  text-white">
+                      {item}
+                    </li>
+                  );
                 })}
-                </ul>
-                </>
-            </li>
-                </div>
-        <div>
-
-            <li className=' flex flex-col my-20'>
-                <>
-                <h2 className='font-bold '>{dataHeaderOne}</h2>
-                <ul className='py-5'>
-
+              </ul>
+            </>
+          </li>
+        </div>
+        <div className="hidden min-[590px]:inline">
+          <li className=" flex flex-col">
+            <>
+              <h2 className="font-bold tracking-widest">{dataHeaderOne}</h2>
+              <ul className="py-5">
                 {dataListOne.map((item: any) => {
-                    console.log(item)
-                    return <li className=' flex flex-col py-[0.4rem] text-white'>{item}</li>
+                  return (
+                    <li className=" flex flex-col py-[0.4rem]  text-white">
+                      {item}
+                    </li>
+                  );
                 })}
-                </ul>
-                </>
-            </li>
-                </div>
-            <div>
-
-            <li className=' flex flex-col my-20'>
-                <>
-                <h2 className='font-bold '>{dataHeaderTwo}</h2>
-                <ul className='py-5'>
-
+              </ul>
+            </>
+          </li>
+        </div>
+        <div className="hidden min-[590px]:inline">
+          <li className=" flex flex-col">
+            <>
+              <h2 className="font-bold tracking-widest ">{dataHeaderTwo}</h2>
+              <ul className="py-5">
                 {dataListTwo.map((item: any) => {
-                    console.log(item)
-                    return <li className=' flex flex-col py-[0.4rem] text-white'>{item}</li>
+                  return (
+                    <li className=" flex flex-col py-[0.4rem]  text-white">
+                      {item}
+                    </li>
+                  );
                 })}
-                </ul>
-                </>
-            </li>
-                </div>
-           
+              </ul>
+            </>
+          </li>
         </div>
-
-        <div className=' my-20  ml-[135px]'>
-        <h2 className='font-bold text-lg'>SUBSCRIBE</h2>
-            <p className=' py-5'>Subscribe to get special offers,</p>
-            <p> free giveaways, and once-in-a-lifetime deals.</p>
-            <form className='w-auto py-5 text-white '>
-        <input type="email" className=" w-[18rem] p-2  text-md border bg-transparent text-white placeholder:text-white" placeholder="Enter your email" >
-            
-        </input>
-        </form>
-
+        <div className="inline min-[590px]:hidden">
+          <details className="3 group border-b border-b-gray-800 transition-all delay-[3000ms] duration-1000">
+            <summary className="flex cursor-pointer items-center justify-between py-3 ">
+              <h2 className="font-bold ">{dataHeaderZero}</h2>
+              <IoIosArrowDown className="group-open:rotate-180" />
+            </summary>
+            <ul className="py-5">
+              {dataListZero.map((item: any) => {
+                return (
+                  <li className=" flex flex-col py-[0.4rem]  text-white">
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
         </div>
-
+        <div className="inline min-[590px]:hidden">
+          <details className="3 motion-reduce group border-b border-b-gray-800">
+            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition-all delay-[8000ms] duration-[8000ms] ease-in">
+              <h2 className="font-bold ">{dataHeaderOne}</h2>
+              <IoIosArrowDown className="group-open:rotate-180" />
+            </summary>
+            <ul className="py-5">
+              {dataListOne.map((item: any) => {
+                return (
+                  <li className=" flex flex-col py-[0.4rem]  text-white">
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        </div>
+        <div className="mb-6 inline min-[590px]:hidden">
+          <details className="3 group border-b border-b-gray-800 transition-all delay-[3000ms] duration-1000">
+            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition-all delay-300 duration-1000">
+              <h2 className="font-bold ">{dataHeaderTwo}</h2>
+              <IoIosArrowDown className="group-open:rotate-180" />
+            </summary>
+            <ul className="py-5">
+              {dataListTwo.map((item: any) => {
+                return (
+                  <li className=" flex flex-col py-[0.4rem]  text-white">
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        </div>
+        <div className="flex flex-col  md:w-72 ">
+          <h2 className=" font-bold uppercase">{footsub.head}</h2>
+          <h1 className=" py-4 ">{footsub.detail}</h1>
+          <div className="relative flex w-full">
+            <div className="pointer-events-none  absolute inset-y-0 left-0 flex items-center pl-3">
+              <svg
+                style={{ color: "white" }}
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                className="bi bi-envelope"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              className=" w-[18.5rem] border border-gray-800 bg-transparent p-2 pl-10 placeholder:pl-1 placeholder:text-white"
+              placeholder="Enter your email"
+              required
+            ></input>
+          </div>
+        </div>
+      </div>
+      <div className=" flex flex-col items-center pt-[2rem]">
+        <Dropup />
+        <h1 className="mt-4 text-xs">{powername}</h1>
+      </div>
     </div>
-    <div className='flex flex-col items-center justify-center'>
-        <div>
-
-        <Dropup/>
-        </div>
-        <h1 className='my-5'>Powered by Shopify</h1>
-    </div>
-                </div>
-  )
-            }
+  );
+};

@@ -14,10 +14,20 @@ module.exports = {
       'raleway': ['Raleway', 'sans-serif'],
       
     },
+    screens: {
+      "sm": "320px",
+      "mm": "375px",
+      "ml": "425px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1440px",
+      "2xl": "2560px",
+    },
+
     extend: { transitionDuration: {
       '0': '0ms',
       '3000': '3000ms',
     }},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }
