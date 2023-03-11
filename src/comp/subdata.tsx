@@ -1,5 +1,3 @@
-import React from "react";
-
 const subdata = {
   head: "Sign up and Save",
   detail:

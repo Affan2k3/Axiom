@@ -1,10 +1,9 @@
 import React from "react";
-// import Dropup from './drop'
-// import Dropdown from './drop'
+
 import { Footerdata, footsub, powername } from "./footerdata";
-// import { BsEnvelope } from "react-icons/bs";
+
 import { IoIosArrowDown } from "react-icons/io";
-// import Dropdown from "./drop";
+
 import { Dropup } from "./dropdown2";
 
 export const Footer = () => {
@@ -17,7 +16,7 @@ export const Footer = () => {
 
   return (
     <div className="w-full bg-black pt-20 pb-14 text-[14.88px]  text-white">
-      <div className="flex flex-col px-[20px] min-[590px]:pl-[40px] md:flex-row md:justify-around md:pl-[0px]">
+      <div className="mr-0 flex flex-col px-[20px] min-[590px]:pl-[40px] md:flex-row md:justify-around md:pl-[0px] lg:mr-7">
         <div className="">
           <div className="flex w-full flex-row justify-between min-[590px]:flex-col">
             <div>
@@ -107,6 +106,14 @@ export const Footer = () => {
             </>
           </li>
         </div>
+        {/*   
+
+        For
+        mobile screen 
+
+
+ */}
+
         <div className="inline min-[590px]:hidden">
           <details className="3 group border-b border-b-gray-800 transition-all delay-[3000ms] duration-1000">
             <summary className="flex cursor-pointer items-center justify-between py-3 ">
@@ -126,7 +133,7 @@ export const Footer = () => {
         </div>
         <div className="inline min-[590px]:hidden">
           <details className="3 motion-reduce group border-b border-b-gray-800">
-            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition-all delay-[8000ms] duration-[8000ms] ease-in">
+            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition duration-[12000ms] ease-in">
               <h2 className="font-bold ">{dataHeaderOne}</h2>
               <IoIosArrowDown className="group-open:rotate-180" />
             </summary>

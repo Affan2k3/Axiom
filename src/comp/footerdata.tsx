@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Footerdata {
   header: string;
   list: string[];

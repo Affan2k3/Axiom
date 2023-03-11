@@ -3,7 +3,7 @@ import { product } from "./prodata";
 export default function Product() {
   return (
     <section className="flex  items-center justify-center">
-      <div className="mx-6 flex cursor-pointer flex-col items-center gap-8  min-[590px]:flex-row">
+      <div className="mx-6 mt-12 flex cursor-pointer flex-col items-center gap-8  min-[590px]:flex-row">
         {product.map((item) => (
           <div className=" h-[100vh] w-full flex-1" key={item.name}>
             <a href={item.name} className={``}>
