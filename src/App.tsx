@@ -5,6 +5,7 @@ import { Subscribe } from "./comp/subscribe";
 // import Dropdown from './comp/drop';
 import Product from "./comp/pro";
 import Grid from "./comp/usualgrid";
+import Product1 from "./comp/product1";
 // import Dropup from "./comp/drop";
 
 function App() {
@@ -15,9 +16,9 @@ function App() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Add the "animate" class when the element is in the viewport
-          entry.target.classList.add("animat");
+          entry.target.classList.add("animate");
         } else {
-          entry.target.classList.remove("animat");
+          entry.target.classList.remove("animate");
         }
       });
     });
@@ -31,9 +32,9 @@ function App() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Add the "animate" class when the element is in the viewport
-          entry.target.classList.add("scal");
+          entry.target.classList.add("scale");
         } else {
-          entry.target.classList.remove("scal");
+          entry.target.classList.remove("scale");
         }
       });
     });
@@ -45,10 +46,11 @@ function App() {
   return (
     <div className="">
       {" "}
+      <Product1 />
       <Grid />
-      {/* <Subscribe />
+      <Subscribe />
       <Product />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
