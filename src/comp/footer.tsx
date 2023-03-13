@@ -1,10 +1,8 @@
 import React from "react";
-
+import { useState } from "react";
 import { Footerdata, footsub, powername } from "./footerdata";
-
 import { IoIosArrowDown } from "react-icons/io";
-
-import { Dropup } from "./dropdown2";
+import { Dropup } from "./dropup";
 
 export const Footer = () => {
   const dataHeaderZero = Footerdata[0].header;
@@ -13,6 +11,32 @@ export const Footer = () => {
   const dataListOne = Footerdata[1].list;
   const dataHeaderTwo = Footerdata[2].header;
   const dataListTwo = Footerdata[2].list;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  const [dropDown1, setDropDown1] = useState(false);
+  const [dropDown2, setDropDown2] = useState(false);
+
+  function setTimeOutForDropdown() {
+    setTimeout(() => {
+      setDropDown(!dropDown);
+    }, 300);
+
+    return function () {
+      clearTimeout(200);
+    };
+  }
+  function setTimeOutForDropdown1() {
+    setTimeout(() => {
+      setDropDown1(!dropDown1);
+    }, 300);
+  }
+  function setTimeOutForDropdown2() {
+    setTimeout(() => {
+      setDropDown2(!dropDown2);
+    }, 400);
+  }
 
   return (
     <div className="w-full bg-black pt-20 pb-14 text-[14.88px]  text-white">
@@ -107,66 +131,94 @@ export const Footer = () => {
           </li>
         </div>
         {/*   
-
         For
         mobile screen 
-
-
  */}
 
-        <div className="inline min-[590px]:hidden">
-          <details className="3 group border-b border-b-gray-800 transition-all delay-[3000ms] duration-1000">
-            <summary className="flex cursor-pointer items-center justify-between py-3 ">
-              <h2 className="font-bold ">{dataHeaderZero}</h2>
-              <IoIosArrowDown className="group-open:rotate-180" />
-            </summary>
-            <ul className="py-5">
-              {dataListZero.map((item: any) => {
-                return (
-                  <li className=" flex flex-col py-[0.4rem]  text-white">
-                    {item}
-                  </li>
-                );
-              })}
-            </ul>
-          </details>
+        <div
+          className={`w-full border-b border-b-gray-800 transition-all duration-[900ms] min-[590px]:hidden ${
+            isOpen ? "h-[17rem]" : "h-16"
+          }`}
+        >
+          <div
+            className="mt-4  flex cursor-pointer items-center justify-between py-3"
+            onClick={() => {
+              setIsOpen(!isOpen);
+              setTimeOutForDropdown();
+            }}
+          >
+            <h2 className="font-bold ">{dataHeaderZero}</h2>
+            <IoIosArrowDown className="group-open:rotate-180" />
+          </div>
+          <div className={` py-5 ${dropDown ? "visible" : "hidden"}`}>
+            {dataListZero.map((item: any) => {
+              return (
+                <li className="flex flex-col py-[0.4rem] text-white   transition-all delay-1000  duration-1000 ease-out">
+                  {item}
+                </li>
+              );
+            })}
+          </div>
         </div>
-        <div className="inline min-[590px]:hidden">
-          <details className="3 motion-reduce group border-b border-b-gray-800">
-            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition duration-[12000ms] ease-in">
-              <h2 className="font-bold ">{dataHeaderOne}</h2>
-              <IoIosArrowDown className="group-open:rotate-180" />
-            </summary>
-            <ul className="py-5">
-              {dataListOne.map((item: any) => {
-                return (
-                  <li className=" flex flex-col py-[0.4rem]  text-white">
-                    {item}
-                  </li>
-                );
-              })}
-            </ul>
-          </details>
+
+        {/* 
+
+
+
+         */}
+
+        <div
+          className={`w-full border-b border-b-gray-800 transition-all duration-[800ms] min-[590px]:hidden ${
+            isOpen1 ? "h-[17rem]" : "h-16"
+          }`}
+        >
+          <div
+            className="mt-4  flex cursor-pointer items-center justify-between py-3"
+            onClick={() => {
+              setIsOpen1(!isOpen1);
+              setTimeOutForDropdown1();
+            }}
+          >
+            <h2 className="font-bold ">{dataHeaderOne}</h2>
+            <IoIosArrowDown className="group-open:rotate-180" />
+          </div>
+          <div className={` py-5 ${dropDown1 ? "visible" : "hidden"}`}>
+            {dataListOne.map((item: any) => {
+              return (
+                <li className="flex flex-col py-[0.4rem] text-white   transition-all delay-1000  duration-1000 ease-out">
+                  {item}
+                </li>
+              );
+            })}
+          </div>
         </div>
-        <div className="mb-6 inline min-[590px]:hidden">
-          <details className="3 group border-b border-b-gray-800 transition-all delay-[3000ms] duration-1000">
-            <summary className=" mt-4 flex cursor-pointer items-center justify-between py-3 transition-all delay-300 duration-1000">
-              <h2 className="font-bold ">{dataHeaderTwo}</h2>
-              <IoIosArrowDown className="group-open:rotate-180" />
-            </summary>
-            <ul className="py-5">
-              {dataListTwo.map((item: any) => {
-                return (
-                  <li className=" flex flex-col py-[0.4rem]  text-white">
-                    {item}
-                  </li>
-                );
-              })}
-            </ul>
-          </details>
+        <div
+          className={`w-full border-b border-b-gray-800 transition-all duration-1000 min-[590px]:hidden ${
+            isOpen2 ? "h-[13rem]" : "h-16"
+          }`}
+        >
+          <div
+            className="mt-4  flex cursor-pointer items-center justify-between py-3"
+            onClick={() => {
+              setIsOpen2(!isOpen2);
+              setTimeOutForDropdown2();
+            }}
+          >
+            <h2 className="font-bold ">{dataHeaderTwo}</h2>
+            <IoIosArrowDown className="group-open:rotate-180" />
+          </div>
+          <div className={` py-5 ${dropDown2 ? "visible" : "hidden "}`}>
+            {dataListTwo.map((item: any) => {
+              return (
+                <li className="flex flex-col py-[0.4rem] text-white   transition-all delay-1000  duration-[2000ms] ease-out">
+                  {item}
+                </li>
+              );
+            })}
+          </div>
         </div>
         <div className="flex flex-col  md:w-72 ">
-          <h2 className=" font-bold uppercase">{footsub.head}</h2>
+          <h2 className=" mt-5 font-bold uppercase">{footsub.head}</h2>
           <h1 className=" py-4 ">{footsub.detail}</h1>
           <div className="relative flex w-full">
             <div className="pointer-events-none  absolute inset-y-0 left-0 flex items-center pl-3">

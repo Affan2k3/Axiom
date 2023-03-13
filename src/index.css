@@ -56,3 +56,8 @@
     /* width: 100%; */
   }
 }
+
+.danim {
+  transition: 1s;
+  transition-duration: 1s;
+}

@@ -5,7 +5,7 @@ export const Dropup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         type="button"
         className="inline-flex w-[270px] justify-between gap-x-1.5 border border-gray-800 bg-transparent px-3 py-2 text-sm text-white  "
