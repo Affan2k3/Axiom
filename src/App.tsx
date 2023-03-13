@@ -4,6 +4,7 @@ import { Footer } from "./comp/footer";
 import { Subscribe } from "./comp/subscribe";
 // import Dropdown from './comp/drop';
 import Product from "./comp/pro";
+import Grid from "./comp/usualgrid";
 // import Dropup from "./comp/drop";
 
 function App() {
@@ -44,9 +45,10 @@ function App() {
   return (
     <div className="">
       {" "}
-      <Subscribe />
+      <Grid />
+      {/* <Subscribe />
       <Product />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
