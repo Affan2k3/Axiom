@@ -148,9 +148,13 @@ export const Footer = () => {
             }}
           >
             <h2 className="font-bold ">{dataHeaderZero}</h2>
-            <IoIosArrowDown className="group-open:rotate-180" />
+            <IoIosArrowDown
+              className={` duration-400  transition-all ease-out ${
+                dropDown ? "rotate-180 " : "rotate-360 "
+              }`}
+            />
           </div>
-          <div className={` py-5 ${dropDown ? "visible" : "hidden"}`}>
+          <div className={` py-5 ${dropDown ? "visible " : "hidden "}`}>
             {dataListZero.map((item: any) => {
               return (
                 <li className="flex flex-col py-[0.4rem] text-white   transition-all delay-1000  duration-1000 ease-out">
@@ -180,12 +184,16 @@ export const Footer = () => {
             }}
           >
             <h2 className="font-bold ">{dataHeaderOne}</h2>
-            <IoIosArrowDown className="group-open:rotate-180" />
+            <IoIosArrowDown
+              className={` duration-400  transition-all ease-out ${
+                dropDown1 ? "rotate-180 " : "rotate-360 "
+              }`}
+            />
           </div>
-          <div className={` py-5 ${dropDown1 ? "visible" : "hidden"}`}>
+          <div className={` py-5 ${dropDown1 ? " visible " : " hidden "}`}>
             {dataListOne.map((item: any) => {
               return (
-                <li className="flex flex-col py-[0.4rem] text-white   transition-all delay-1000  duration-1000 ease-out">
+                <li className="flex flex-col py-[0.4rem] text-white transition-all delay-1000 duration-1000">
                   {item}
                 </li>
               );
@@ -205,7 +213,11 @@ export const Footer = () => {
             }}
           >
             <h2 className="font-bold ">{dataHeaderTwo}</h2>
-            <IoIosArrowDown className="group-open:rotate-180" />
+            <IoIosArrowDown
+              className={` duration-400  transition-all ease-out ${
+                dropDown2 ? "rotate-180 " : "rotate-360 "
+              }`}
+            />
           </div>
           <div className={` py-5 ${dropDown2 ? "visible" : "hidden "}`}>
             {dataListTwo.map((item: any) => {
