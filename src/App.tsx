@@ -6,6 +6,8 @@ import { Subscribe } from "./comp/subscribe";
 import Product from "./comp/pro";
 import Grid from "./comp/usualgrid";
 import Product1 from "./comp/product1";
+import BuyNow2 from "./comp/shacomp/BuyNow2";
+import { BuyNowData } from "./comp/shacomp/BuyNow2/BuyNowData";
 // import Dropup from "./comp/drop";
 
 function App() {
@@ -48,6 +50,7 @@ function App() {
       {" "}
       <Product1 />
       <Grid />
+      <BuyNow2 data={BuyNowData} />
       <Subscribe />
       <Product />
       <Footer />
