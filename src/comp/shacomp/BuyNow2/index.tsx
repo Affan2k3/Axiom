@@ -19,8 +19,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
     props.data.ImgSliderData[0]
   );
   return (
-    <section className="  mx-[40px] mb-[8rem] flex flex-col justify-center gap-5 min-[360px]:mx-[70px] min-[690px]:flex-row">
-      <div className="slider_Div slider_img cc:min-w-[450px] p- top-0 flex h-full min-w-[250px] flex-1 pt-[80px] mm:min-w-[350px] min-[590px]:h-[50rem] lg:sticky">
+    <section className=" mx-[40px] mt-[300px]  flex flex-col justify-center gap-5 min-[360px]:mx-[70px] min-[690px]:flex-row">
+      <div className="slider_Div slider_img p- top-0 flex h-full min-w-[250px] flex-1 pt-[80px] mm:min-w-[350px] ml:mx-3 ml:w-[250px] min-[590px]:h-[50rem] min-[590px]:min-w-[450px] min-[700px]:sticky ">
         <div className="imgSidebarBtn order-none mr-4 flex flex-col gap-5 md:order-none ">
           {props.data.ImgSliderData.map((item, i) => {
             return (
@@ -54,7 +54,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider slider_img mb-2 flex h-[380pxrem] w-[14rem] justify-center overflow-hidden ml:w-[18rem] min-[590px]:h-[750px] min-[590px]:w-[29.5625rem] ">
+        <div className="mainSlider slider_img mb-2 flex h-[380pxrem] w-[14rem] justify-center overflow-hidden ml:w-[15rem] min-[590px]:h-[750px] min-[590px]:w-[29.5625rem] ">
           {/*h-[70%] ml:h-[80%] md:h-[110%] */}
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
@@ -82,7 +82,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
         </div>
       </div>
 
-      <div className="details mb-10 flex-1 pt-[80px] mm:min-w-[300px]">
+      <div className="details mb-10 flex-1 pt-[80px] mm:min-w-[300px] md:pb-[18rem] lg:pb-[6rem] ">
         <h2 className="text-3xl font-extrabold">{props.data.title}</h2>
         <span className="block divide-y divide-gray-300  py-6 text-2xl font-light">
           ${props.data.price.m}
